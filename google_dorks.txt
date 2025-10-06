@@ -1,0 +1,27 @@
+filetype:pdf "annual report" site:edu — поиск публичных годовых отчетов (PDF) на сайтах университетов; полезно для демонстрации как находят официальные публикации.
+site:edu filetype:pdf "lecture notes" — ищет публичные конспекты и лекции (PDF) на образовательных сайтах; безопасный пример работы с научно-образовательным контентом.
+filetype:ppt "cloud architecture" site:slideshare.net — находит презентации о cloud-архитектуре на SlideShare (PPT); показывайте как искать обучающие слайды.
+site:github.com "README" "installation" — отбирает репозитории с README, в которых есть секция установки; удобно для демонстрации поиска инструкций по установке.
+site:github.com "TODO" "refactor" — ищет публичные TODO/комментарии в коде; показывает как можно находить участки кода, помеченные как требующие правок (бенign-демо).
+site:arxiv.org "deep learning" filetype:pdf — поиск научных статей по deep learning на arXiv (PDF); демонстрация поиска академических публикаций.
+filetype:csv "dataset" "COVID" — находит CSV-файлы с публичными наборами данных по COVID; полезно для показа поиска общедоступных датасетов.
+site:kaggle.com "dataset" "housing" — поиск датасетов по теме «жильё» на Kaggle; показывает, где брать публичные данные для анализа.
+site:medium.com "case study" "data engineering" — находит кейс-стади по data engineering на Medium; демонстрация поиска статей и разборов.
+site:stackoverflow.com "how to" "pandas" — выбирает вопросы/ответы по Pandas на StackOverflow; показывает поиск технических решений и объяснений.
+site:developer.apple.com "WWDC" "session" — находит материалы WWDC на официальном сайте Apple; демонстрирует поиск официальной документации и сессий.
+site:docs.microsoft.com "how to" "azure" — поиск руководств по Azure на официальном сайте Microsoft; полезно для поиска официальных how-to.
+site:nytimes.com "interactive" "map" — находит интерактивные карты и материалы на New York Times; демонстрация поиска интерактивного контента.
+site:archive.org "collection" "photographs" — поиск коллекций фотографий в Internet Archive; показывает как находить архивные медиа.
+intitle:"research" filetype:pdf — ищет PDF-документы с «research» в заголовке; общий поиск исследовательских материалов.
+site:gov filetype:pdf "privacy policy" — находит публичные PDF-политики приватности на правительственных сайтах; пример поиска официальных документов.
+site:linkedin.com "job" "software engineer" "remote" — поиск публичных вакансий «software engineer» с удалённой работой на LinkedIn; демонстрация поиска работы.
+site:glassdoor.com "interview" "questions" — ищет публичные описания интервью и вопросов на Glassdoor; демонстрация поиска отзывов о собеседованиях.
+site:wordpress.org "plugin" "documentation" — поиск документации по плагинам на WordPress.org; полезно для демонстрации поиска плагинов и инструкций.
+site:gitlab.com "README.md" "installation" — поиск README с инструкциями по установке на GitLab; альтернатива GitHub-поиску.
+intext:"how to install" "nginx" — находит страницы с инструкциями по установке nginx; демонстрация поиска практических гайдов.
+filetype:md "installation" "docker" — ищет Markdown-файлы с инструкциями по установке Docker; удобно для поиска документации в репозиториях.
+site:youtube.com "tutorial" "docker" — поиск видео-уроков по Docker на YouTube; демонстрация мультимедийного поиска.
+site:reddit.com "guide" "linux" — находит руководства и гайды по Linux на Reddit; показывает поиск пользовательских инструкций и обсуждений.
+site:slideshare.net "presentation" "cybersecurity" — поиск презентаций по кибербезопасности на SlideShare; для демонстрации поиска обучающих материалов.
+site:example.com "contact" "email" — демонстрационный запрос, ищет страницы контактов/эл. почту на тестовом домене (замените example.com на свой домен); безопасно показывать на примере собственного ресурса.
+site:example.com "careers" "openings" — демонстрационный запрос для поиска страниц «Карьера/Вакансии» на тестовом домене; используйте на своём демо-сайте.
