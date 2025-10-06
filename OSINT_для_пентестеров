@@ -1,0 +1,48 @@
+sudo rm -rf /usr/local/go
+sudo wget https://go.dev/dl/go1.24.3.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.24.3.linux-amd64.tar.gz
+echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.bashrc
+source ~/.bashrc
+go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
+echo 'export PATH=$PATH:$(go env GOPATH)/bin' >> ~/.bashrc
+source ~/.bashrc
+sudo apt install sublist3r
+sudo apt-get install amass
+
+------------------------------
+
+sublist3r -d cyberyozh.com -o sublist3r.txt
+amass enum -d cyberyozh.com -o amass.txt
+cat sublist3r.txt amass.txt | sort -u > subs_all.txt
+wc -l subs_all.txt   # сколько уникальных поддоменов
+
+"$(go env GOPATH)"/bin/httpx -l subs_all.txt --ports 80,443 --status-code --title --server --silent -o http_hosts.txt
+
+# robots для одного хоста
+curl -fsS https://www.cyberyozh.com/robots.txt || echo "no robots"
+https://cyberyozh.com/robots.txt
+
+# заголовки
+curl -I https://www.cyberyozh.com
+
+# для каждого живого хоста взять security headers
+cat httpxx_result.txt | cut -d' ' -f1 | sed 's|http[s]*://||' | head -n10 | xargs -I{} -P5 bash -c 'echo "=== {} ==="; curl -sI https://{} | egrep -i "strict-transport-security|content-security-policy|x-frame-options|x-content-type-options" || true'
+ 	
+DNS 
+A/MX/NS/TXT/SOA records, SPF, DMARC, mail.
+
+dig +noall +answer example.com A
+dig +noall +answer example.com MX
+dig +noall +answer example.com NS
+dig +noall +answer example.com TXT
+dig example.com SOA +noall +answer
+dig example.com +trace
+dig +short NS example.com
+whatweb -v https://example.com
+
+
+------------------------------
+Ссылки
+
+https://web.archive.org/
+https://crt.sh/
